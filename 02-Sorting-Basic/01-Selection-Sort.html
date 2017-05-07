@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <script>
+    function swap(array, x, y) {
+      var b = array[y];
+      array[y] = array[x];
+      array[x] = b;
+    }
+
+    function selectionSort(array) {
+      if (!array || !array.length) {
+        return;
+      }
+      var maxLength = array.length;
+      var i = 0,
+        j = 0;
+      for (; i < maxLength; i++) {
+        var minIndex = i;
+        for (j = i + 1; j < maxLength; j++) {
+          if (array[j] < array[minIndex]) {
+            minIndex = j;
+          }
+        }
+        swap(array, i, minIndex);
+      }
+    }
+
+    var testArray = [1, 2, 4, 5, 7, 2, 1, 5, 6, 3];
+    selectionSort(testArray);
+    console.log(testArray);
+  </script>
+</body>
+
+</html>
