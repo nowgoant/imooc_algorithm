@@ -9,6 +9,13 @@ gulp.task('browser-sync', function () {
       baseDir: "./src"
     }
   });
+
+  gulp.watch("src/**", ['watch']);
+});
+
+gulp.task('watch', function (done) {
+  browserSync.reload();
+  done();
 });
 
 gulp.task('default', ['browser-sync']);

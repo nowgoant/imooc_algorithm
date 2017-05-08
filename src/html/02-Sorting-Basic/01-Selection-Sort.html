@@ -6,6 +6,7 @@
 
 <body>
   <div>选择排序</div>
+  <script src="./../../js/sortTestHelper.js"></script>
   <script>
     function swap(array, x, y) {
       var b = array[y];
@@ -30,10 +31,11 @@
         swap(array, i, minIndex);
       }
     }
-
-    var testArray = [1, 2, 4, 5, 7, 2, 1, 5, 6, 3];
-    selectionSort(testArray);
+    var n = 200;
+    var testArray = sortTestHelper.generateRandomArray(n, 100, n);
     console.log(testArray);
+    // selectionSort(testArray);
+    // console.log(testArray);
   </script>
 </body>
 
