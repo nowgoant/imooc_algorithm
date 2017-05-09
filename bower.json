@@ -1,0 +1,8 @@
+{
+  "name": "algorithm",
+  "dependencies": {
+    "platform.js": "platform#^1.3.4",
+    "lodash": "^4.17.4",
+    "benchmark": "^2.1.4"
+  }
+}
