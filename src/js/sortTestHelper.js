@@ -1,4 +1,9 @@
 var sortTestHelper = {
+  swap: function (array, x, y) {
+    var b = array[y];
+    array[y] = array[x];
+    array[x] = b;
+  },
   // 生成有n个元素的随机数组，每个元素的随机范围[rangeL，rangeR]
   generateRandomArray: function (n, rangeL, rangeR) {
     var arr = new Array(n);

@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <div>插入排序</div>
+  <script src="/bower_components/lodash/dist/lodash.js"></script>
+  <script src="/bower_components/platform.js/platform.js"></script>
+  <script src="/bower_components/benchmark/benchmark.js"></script>
+  <script src="./../../js/sortTestHelper.js"></script>
+  <script src="./../../js/basic/insertion.js"></script>
+  <script>
+    var n = 1000;
+    var testArray = sortTestHelper.generateRandomArray(n, 100, n);
+    console.log(testArray);
+    insertionSort(testArray);
+    console.log(testArray);
+  </script>
+
+</body>
+
+</html>

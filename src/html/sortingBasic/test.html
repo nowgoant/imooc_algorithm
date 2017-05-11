@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <div>Test:</div>
+  <script src="/bower_components/lodash/dist/lodash.js"></script>
+  <script src="/bower_components/platform.js/platform.js"></script>
+  <script src="/bower_components/benchmark/benchmark.js"></script>
+  <script src="./../../js/sortTestHelper.js"></script>
+  <script src="./../../js/basic/selectioin.js"></script>
+  <script src="./../../js/basic/insertion.js"></script>
+  <script>
+    var suite = new Benchmark.Suite;
+    console.log('start ...');
+    var max = 1000;
+    var testArray = sortTestHelper.generateRandomArray(max, 1, max);
+    // add tests
+    suite.add('selectionSort', function () {
+        var testArrayTemp = [].concat(testArray);
+        selectionSort(testArrayTemp);
+        // console.log('selectionSort');
+      })
+      .add('insertionSort', function () {
+        var testArrayTemp = [].concat(testArray);
+        insertionSort(testArrayTemp);
+        // console.log('insertionSort');
+      })
+      // add listeners
+      .on('cycle', function (event) {
+        console.log(String(event.target));
+      })
+      .on('complete', function () {
+        console.log('Fastest is ' + this.filter('fastest').map('name'));
+      })
+      // run async
+      .run({
+        'async': true
+      });
+  </script>
+
+</body>
+
+</html>

@@ -2,7 +2,8 @@
   "name": "algorithm",
   "version": "0.0.1",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "dev": "gulp"
   },
   "devDependencies": {
     "browser-sync": "^2.18.8",
