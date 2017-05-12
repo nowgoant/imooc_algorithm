@@ -12,11 +12,16 @@
   <script src="./../../js/sortTestHelper.js"></script>
   <script src="./../../js/basic/insertion.js"></script>
   <script>
-    var n = 1000;
+    var n = 100;
     var testArray = sortTestHelper.generateRandomArray(n, 100, n);
     console.log(testArray);
     insertionSort(testArray);
     console.log(testArray);
+
+    var testArray1 = sortTestHelper.generateNearlyOrderedArray(n, 10);
+    console.log(testArray1);
+    insertionSortOptimize1(testArray1);
+    console.log(testArray1);
   </script>
 
 </body>

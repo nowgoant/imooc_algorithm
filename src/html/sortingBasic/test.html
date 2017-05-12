@@ -15,8 +15,10 @@
   <script>
     var suite = new Benchmark.Suite;
     console.log('start ...');
-    var max = 1000;
+    var max = 10000;
+    // var testArray = sortTestHelper.generateNearlyOrderedArray(max, 100);
     var testArray = sortTestHelper.generateRandomArray(max, 1, max);
+    console.log(testArray);
     // add tests
     suite.add('selectionSort', function () {
         var testArrayTemp = [].concat(testArray);
@@ -27,6 +29,11 @@
         var testArrayTemp = [].concat(testArray);
         insertionSort(testArrayTemp);
         // console.log('insertionSort');
+      })
+      .add('insertionSortOptimize1', function () {
+        var testArrayTemp = [].concat(testArray);
+        insertionSortOptimize1(testArrayTemp);
+        // console.log('insertionSortOptimize1');
       })
       // add listeners
       .on('cycle', function (event) {

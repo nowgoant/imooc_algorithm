@@ -14,5 +14,20 @@ var sortTestHelper = {
     }
 
     return arr;
+  },
+  generateNearlyOrderedArray: function (n, swapTimes) {
+    var array = [];
+
+    for (var i = 0; i < n; i++) {
+      array[i] = i;
+    }
+
+    for (var i = 0; i < swapTimes; i++) {
+      var posx = Math.floor(Math.random() * n);
+      var posy = Math.floor(Math.random() * n);
+      sortTestHelper.swap(array, posx, posy);
+    }
+
+    return array;
   }
 };
