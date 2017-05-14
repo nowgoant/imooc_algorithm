@@ -12,6 +12,7 @@
   <script src="./../../js/sortTestHelper.js"></script>
   <script src="./../../js/basic/selectioin.js"></script>
   <script src="./../../js/basic/insertion.js"></script>
+  <script src="./../../js/advance/merge.js"></script>
   <script>
     var suite = new Benchmark.Suite;
     console.log('start ...');
@@ -33,6 +34,11 @@
       .add('insertionSortOptimize1', function () {
         var testArrayTemp = [].concat(testArray);
         insertionSortOptimize1(testArrayTemp);
+        // console.log('insertionSortOptimize1');
+      })
+      .add('mergeSort', function () {
+        var testArrayTemp = [].concat(testArray);
+        mergeSort(testArrayTemp);
         // console.log('insertionSortOptimize1');
       })
       // add listeners

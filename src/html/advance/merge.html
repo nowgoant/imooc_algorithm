@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <div>归并排序</div>
+  <script src="/bower_components/lodash/dist/lodash.js"></script>
+  <script src="/bower_components/platform.js/platform.js"></script>
+  <script src="/bower_components/benchmark/benchmark.js"></script>
+  <script src="./../../js/sortTestHelper.js"></script>
+  <script src="./../../js/advance/merge.js"></script>
+  <script>
+    var n = 10;
+    var testArray = sortTestHelper.generateRandomArray(n, 0, n);
+    console.log(testArray);
+    mergeSort(testArray);
+    console.log(testArray);
+  </script>
+
+</body>
+
+</html>
