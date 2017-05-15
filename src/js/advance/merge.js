@@ -25,6 +25,8 @@ function __merge(arr, l, mid, r) {
       j++;
     }
   }
+
+  console.log('aux', aux);
 }
 
 /**
